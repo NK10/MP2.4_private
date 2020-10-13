@@ -11,8 +11,9 @@ def load_ranker(cfg_file):
     The parameter to this function, cfg_file, is the path to a
     configuration file used to load the index.
     """
-    return metapy.index.OkapiBM25(k1=1.2,b=0.1,k3=500)
-
+    #return metapy.index.OkapiBM25()
+    #return metapy.index.DirichletPrior()
+    return metapy.index.JelinekMercer(.1)
 if __name__ == '__main__':
     if len(sys.argv) != 2:
         print("Usage: {} config.toml".format(sys.argv[0]))
