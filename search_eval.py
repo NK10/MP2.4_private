@@ -13,7 +13,7 @@ def load_ranker(cfg_file):
     """
     #return metapy.index.OkapiBM25()
     #return metapy.index.DirichletPrior()
-    return metapy.index.JelinekMercer(.1)
+    return metapy.index.JelinekMercer(.61)
 if __name__ == '__main__':
     if len(sys.argv) != 2:
         print("Usage: {} config.toml".format(sys.argv[0]))
